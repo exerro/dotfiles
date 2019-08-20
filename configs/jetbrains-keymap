@@ -1,4 +1,4 @@
-<keymap version="1" name="Default for Windows copy" parent="$default">
+<keymap version="1" name="Jetbrains Keymap Ben" parent="$default">
   <action id="$Copy">
     <keyboard-shortcut first-keystroke="ctrl c" />
   </action>
@@ -18,34 +18,52 @@
   <action id="ActivateFavoritesToolWindow" />
   <action id="ActivateFindToolWindow" />
   <action id="ActivateMessagesToolWindow" />
+  <action id="AddToFavoritesPopup" />
+  <action id="Arrangement.Rule.Edit" />
   <action id="AutoIndentLines" />
   <action id="Back" />
   <action id="CallHierarchy" />
   <action id="ChangesView.Diff" />
   <action id="ChangesView.Revert" />
+  <action id="ChangesView.ShelveSilently" />
   <action id="ChooseDebugConfiguration" />
   <action id="ChooseRunConfiguration">
     <keyboard-shortcut first-keystroke="shift ctrl r" />
   </action>
+  <action id="ClassNameCompletion" />
   <action id="CloseActiveTab" />
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="ctrl w" />
   </action>
+  <action id="CodeInspection.OnEditor" />
+  <action id="CollapseAll" />
   <action id="CollapseAllRegions" />
   <action id="CollapseBlock" />
+  <action id="CollapseExpandableComponent" />
   <action id="CollapseRegion" />
   <action id="CollapseRegionRecursively" />
   <action id="CollapseSelection" />
+  <action id="CollapseTreeNode" />
   <action id="CommentByBlockComment" />
   <action id="CommentByLineComment">
     <keyboard-shortcut first-keystroke="ctrl slash" />
   </action>
   <action id="CompareTwoFiles" />
   <action id="Compile" />
+  <action id="Console.Execute" />
+  <action id="Console.Execute.Multiline" />
+  <action id="Console.History.Browse" />
+  <action id="Console.Open">
+    <keyboard-shortcut first-keystroke="ctrl alt c" />
+  </action>
+  <action id="Console.TableResult.CloneColumn" />
   <action id="Console.TableResult.CloneRow" />
   <action id="Console.TableResult.CompareCells" />
+  <action id="Console.TableResult.DeleteColumns" />
+  <action id="Console.TableResult.EditValue" />
   <action id="Console.TableResult.NextPage" />
   <action id="Console.TableResult.PreviousPage" />
+  <action id="ContextHelp" />
   <action id="ConvertJavaToKotlin" />
   <action id="CopyElement" />
   <action id="CopyPaths" />
@@ -54,16 +72,22 @@
   <action id="Debug" />
   <action id="Diff.ApplyLeftSide" />
   <action id="Diff.ApplyRightSide" />
+  <action id="Diff.FocusOppositePane" />
   <action id="Diff.NextChange" />
   <action id="Diff.PrevChange" />
   <action id="Diff.ShowDiff" />
   <action id="Diff.ShowSettingsPopup" />
+  <action id="DomCollectionControl.Add" />
+  <action id="DumpLookupElementWeights" />
+  <action id="DuplicatesForm.SendToLeft" />
+  <action id="DuplicatesForm.SendToRight" />
+  <action id="EditBreakpoint" />
   <action id="EditSource" />
-  <action id="EditorAddOrRemoveCaret" />
-  <action id="EditorAddRectangularSelectionOnMouseDrag" />
-  <action id="EditorBackSpace">
-    <keyboard-shortcut first-keystroke="back_space" />
+  <action id="EditSourceInNewWindow" />
+  <action id="EditorAddOrRemoveCaret">
+    <mouse-shortcut keystroke="control button1" />
   </action>
+  <action id="EditorAddRectangularSelectionOnMouseDrag" />
   <action id="EditorBackwardParagraph">
     <keyboard-shortcut first-keystroke="ctrl alt left" />
   </action>
@@ -81,16 +105,28 @@
   <action id="EditorDuplicate">
     <keyboard-shortcut first-keystroke="shift ctrl d" />
   </action>
+  <action id="EditorEnter">
+    <keyboard-shortcut first-keystroke="enter" />
+    <keyboard-shortcut first-keystroke="shift enter" />
+  </action>
   <action id="EditorFocusGutter" />
   <action id="EditorForwardParagraph">
     <keyboard-shortcut first-keystroke="ctrl alt right" />
   </action>
   <action id="EditorJoinLines" />
+  <action id="EditorLookupDown" />
+  <action id="EditorLookupUp" />
   <action id="EditorMatchBrace">
     <keyboard-shortcut first-keystroke="ctrl m" />
   </action>
+  <action id="EditorMoveDownAndScroll">
+    <keyboard-shortcut first-keystroke="ctrl down" />
+  </action>
   <action id="EditorMoveToPageBottom" />
   <action id="EditorMoveToPageTop" />
+  <action id="EditorMoveUpAndScroll">
+    <keyboard-shortcut first-keystroke="ctrl up" />
+  </action>
   <action id="EditorNextWordInDifferentHumpsMode">
     <keyboard-shortcut first-keystroke="alt right" />
   </action>
@@ -105,7 +141,9 @@
   <action id="EditorPreviousWordInDifferentHumpsModeWithSelection">
     <keyboard-shortcut first-keystroke="shift alt left" />
   </action>
+  <action id="EditorScrollDown" />
   <action id="EditorScrollToCenter" />
+  <action id="EditorScrollUp" />
   <action id="EditorSelectWord">
     <keyboard-shortcut first-keystroke="ctrl e" />
   </action>
@@ -123,12 +161,14 @@
   <action id="EmmetNextEditPoint" />
   <action id="EmmetPreviousEditPoint" />
   <action id="EvaluateExpression" />
+  <action id="ExpandAll" />
   <action id="ExpandAllRegions" />
   <action id="ExpandAllToLevel1" />
   <action id="ExpandAllToLevel2" />
   <action id="ExpandAllToLevel3" />
   <action id="ExpandAllToLevel4" />
   <action id="ExpandAllToLevel5" />
+  <action id="ExpandExpandableComponent" />
   <action id="ExpandRegion" />
   <action id="ExpandRegionRecursively" />
   <action id="ExpandToLevel1" />
@@ -136,10 +176,15 @@
   <action id="ExpandToLevel3" />
   <action id="ExpandToLevel4" />
   <action id="ExpandToLevel5" />
+  <action id="ExpandTreeNode" />
+  <action id="ExportToTextFile" />
   <action id="ExternalJavaDoc" />
   <action id="ExtractFunctionToScope" />
   <action id="ExtractMethod" />
   <action id="FileChooser.GotoDesktop" />
+  <action id="FileChooser.GotoHome" />
+  <action id="FileChooser.GotoProject" />
+  <action id="FileChooser.TogglePathShowing" />
   <action id="FileStructurePopup" />
   <action id="Find">
     <keyboard-shortcut first-keystroke="ctrl f" />
@@ -151,13 +196,24 @@
   <action id="FindUsages" />
   <action id="FindUsagesInFile" />
   <action id="FindWordAtCaret" />
+  <action id="ForceRefresh" />
   <action id="ForceRunToCursor" />
   <action id="ForceStepInto" />
   <action id="ForceStepOver" />
   <action id="Forward" />
+  <action id="FullyExpandTreeNode" />
   <action id="Git.Branches" />
   <action id="Git.Commit.And.Push.Executor" />
   <action id="GotoAction" />
+  <action id="GotoBookmark0" />
+  <action id="GotoBookmark1" />
+  <action id="GotoBookmark2" />
+  <action id="GotoBookmark3" />
+  <action id="GotoBookmark4" />
+  <action id="GotoBookmark5" />
+  <action id="GotoBookmark6" />
+  <action id="GotoBookmark7" />
+  <action id="GotoBookmark8" />
   <action id="GotoBookmark9" />
   <action id="GotoClass" />
   <action id="GotoCustomRegion" />
@@ -178,11 +234,24 @@
   <action id="GotoTypeDeclaration">
     <keyboard-shortcut first-keystroke="shift ctrl b" />
   </action>
-  <action id="HideActiveWindow" />
+  <action id="Graph.ActualSize" />
+  <action id="Graph.ApplyCurrentLayout" />
+  <action id="Graph.ZoomIn" />
+  <action id="Graph.ZoomOut" />
+  <action id="HideActiveWindow">
+    <keyboard-shortcut first-keystroke="ctrl h" />
+  </action>
   <action id="HideAllWindows" />
   <action id="HighlightUsagesInFile" />
   <action id="HippieBackwardCompletion" />
   <action id="HippieCompletion" />
+  <action id="Images.EditExternally" />
+  <action id="Images.Editor.ActualSize" />
+  <action id="Images.Editor.ToggleGrid" />
+  <action id="Images.ShowThumbnails" />
+  <action id="Images.Thumbnails.EnterAction" />
+  <action id="Images.Thumbnails.ToggleRecursive" />
+  <action id="Images.Thumbnails.UpFolder" />
   <action id="ImplementMethods" />
   <action id="Inline" />
   <action id="InsertLiveTemplate" />
@@ -194,11 +263,15 @@
   <action id="IntroduceTypeAlias" />
   <action id="IntroduceVariable" />
   <action id="JumpToLastWindow" />
+  <action id="Kotlin.RunScratch" />
+  <action id="MaintenanceAction" />
   <action id="MavenHelper.QuickRunMavenGoal" />
   <action id="MavenHelper.QuickRunRootMavenGoal" />
   <action id="MaximizeToolWindow" />
   <action id="MethodDown" />
   <action id="MethodHierarchy" />
+  <action id="MethodOverloadSwitchDown" />
+  <action id="MethodOverloadSwitchUp" />
   <action id="MethodUp" />
   <action id="Move" />
   <action id="Mvc.RunTarget" />
@@ -209,6 +282,7 @@
   <action id="NextTab">
     <keyboard-shortcut first-keystroke="ctrl page_down" />
   </action>
+  <action id="OpenElementInNewWindow" />
   <action id="PasteMultiple">
     <keyboard-shortcut first-keystroke="shift ctrl v" />
   </action>
@@ -219,6 +293,7 @@
   <action id="PreviousTab">
     <keyboard-shortcut first-keystroke="ctrl page_up" />
   </action>
+  <action id="ProjectViewChangeView" />
   <action id="PublishGroup.UploadTo" />
   <action id="QuickChangeScheme" />
   <action id="QuickEvaluateExpression" />
@@ -230,10 +305,13 @@
   <action id="RecentLocations" />
   <action id="Refactorings.QuickListPopupAction" />
   <action id="ReformatCode" />
+  <action id="Refresh" />
   <action id="Replace">
     <keyboard-shortcut first-keystroke="ctrl alt f" />
   </action>
   <action id="ReplaceInPath" />
+  <action id="Rerun" />
+  <action id="RerunTests" />
   <action id="ResizeToolWindowDown" />
   <action id="ResizeToolWindowLeft" />
   <action id="ResizeToolWindowRight" />
@@ -241,18 +319,27 @@
   <action id="RestoreDefaultLayout" />
   <action id="Resume" />
   <action id="Run" />
+  <action id="RunClass" />
   <action id="RunDashboard.CopyConfiguration" />
+  <action id="RunDashboard.ShowConfigurations" />
   <action id="RunInspection" />
   <action id="RunJsbtTask" />
   <action id="RunToCursor" />
   <action id="SafeDelete" />
   <action id="ScrollTreeToCenter" />
+  <action id="SearchEverywhere.NavigateToNextGroup">
+    <keyboard-shortcut first-keystroke="page_down" />
+  </action>
+  <action id="SearchEverywhere.NavigateToPrevGroup">
+    <keyboard-shortcut first-keystroke="page_up" />
+  </action>
   <action id="SelectAllOccurrences" />
   <action id="SelectIn" />
   <action id="SelectNextOccurrence">
     <keyboard-shortcut first-keystroke="ctrl d" />
   </action>
   <action id="SendEOF" />
+  <action id="ServiceView.GroupByServiceGroups" />
   <action id="ShowBookmarks" />
   <action id="ShowContent" />
   <action id="ShowErrorDescription" />
@@ -260,14 +347,18 @@
   <action id="ShowFilePath" />
   <action id="ShowFilterPopup" />
   <action id="ShowNavBar" />
+  <action id="ShowPopupMenu" />
   <action id="ShowReformatFileDialog" />
+  <action id="ShowSearchHistory" />
   <action id="ShowSettingsAndFindUsages" />
   <action id="ShowUsages" />
   <action id="SmartStepInto" />
   <action id="StepInto" />
   <action id="StepOut" />
   <action id="StepOver" />
-  <action id="Stop" />
+  <action id="Stop">
+    <keyboard-shortcut first-keystroke="shift ctrl h" />
+  </action>
   <action id="StopBackgroundProcesses" />
   <action id="SurroundWith">
     <keyboard-shortcut first-keystroke="shift ctrl 9" />
@@ -277,7 +368,19 @@
   <action id="SwitcherRecentEditedChangedToggleCheckBox" />
   <action id="Terminal.MoveToolWindowTabLeft" />
   <action id="Terminal.MoveToolWindowTabRight" />
+  <action id="TodoViewGroupByFlattenPackage" />
+  <action id="TodoViewGroupByShowModules" />
+  <action id="TodoViewGroupByShowPackages" />
   <action id="ToggleBookmark" />
+  <action id="ToggleBookmark0" />
+  <action id="ToggleBookmark1" />
+  <action id="ToggleBookmark2" />
+  <action id="ToggleBookmark3" />
+  <action id="ToggleBookmark4" />
+  <action id="ToggleBookmark5" />
+  <action id="ToggleBookmark6" />
+  <action id="ToggleBookmark7" />
+  <action id="ToggleBookmark8" />
   <action id="ToggleBookmark9" />
   <action id="ToggleBookmarkWithMnemonic" />
   <action id="ToggleLineBreakpoint" />
@@ -288,8 +391,10 @@
     <keyboard-shortcut first-keystroke="ctrl 9" />
   </action>
   <action id="UpdateRunningApplication" />
+  <action id="UsageView.Include" />
   <action id="Vcs.QuickListPopupAction" />
   <action id="Vcs.ShowMessageHistory" />
+  <action id="Vcs.ToggleAmendCommitMode" />
   <action id="VcsShowNextChangeMarker" />
   <action id="VcsShowPrevChangeMarker" />
   <action id="ViewBreakpoints" />
