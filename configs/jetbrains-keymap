@@ -18,6 +18,9 @@
   <action id="ActivateFavoritesToolWindow" />
   <action id="ActivateFindToolWindow" />
   <action id="ActivateMessagesToolWindow" />
+  <action id="ActivateRunToolWindow">
+    <keyboard-shortcut first-keystroke="ctrl enter" />
+  </action>
   <action id="AddToFavoritesPopup" />
   <action id="Arrangement.Rule.Edit" />
   <action id="AutoIndentLines" />
@@ -77,6 +80,7 @@
   <action id="Diff.PrevChange" />
   <action id="Diff.ShowDiff" />
   <action id="Diff.ShowSettingsPopup" />
+  <action id="DirDiffMenu.SynchronizeDiff.All" />
   <action id="DomCollectionControl.Add" />
   <action id="DumpLookupElementWeights" />
   <action id="DuplicatesForm.SendToLeft" />
@@ -148,6 +152,7 @@
     <keyboard-shortcut first-keystroke="ctrl e" />
   </action>
   <action id="EditorShowGutterIconTooltip" />
+  <action id="EditorSplitLine" />
   <action id="EditorStartNewLine" />
   <action id="EditorStartNewLineBefore" />
   <action id="EditorToggleCase">
@@ -178,6 +183,9 @@
   <action id="ExpandToLevel5" />
   <action id="ExpandTreeNode" />
   <action id="ExportToTextFile" />
+  <action id="ExpressionTypeInfo">
+    <keyboard-shortcut first-keystroke="shift ctrl q" />
+  </action>
   <action id="ExternalJavaDoc" />
   <action id="ExtractFunctionToScope" />
   <action id="ExtractMethod" />
@@ -239,7 +247,7 @@
   <action id="Graph.ZoomIn" />
   <action id="Graph.ZoomOut" />
   <action id="HideActiveWindow">
-    <keyboard-shortcut first-keystroke="ctrl h" />
+    <keyboard-shortcut first-keystroke="shift ctrl down" />
   </action>
   <action id="HideAllWindows" />
   <action id="HighlightUsagesInFile" />
@@ -264,10 +272,13 @@
   <action id="IntroduceVariable" />
   <action id="JumpToLastWindow" />
   <action id="Kotlin.RunScratch" />
+  <action id="KotlinShellExecute" />
   <action id="MaintenanceAction" />
   <action id="MavenHelper.QuickRunMavenGoal" />
   <action id="MavenHelper.QuickRunRootMavenGoal" />
-  <action id="MaximizeToolWindow" />
+  <action id="MaximizeToolWindow">
+    <keyboard-shortcut first-keystroke="shift ctrl up" />
+  </action>
   <action id="MethodDown" />
   <action id="MethodHierarchy" />
   <action id="MethodOverloadSwitchDown" />
@@ -361,7 +372,7 @@
   </action>
   <action id="StopBackgroundProcesses" />
   <action id="SurroundWith">
-    <keyboard-shortcut first-keystroke="shift ctrl 9" />
+    <keyboard-shortcut first-keystroke="ctrl 9" />
   </action>
   <action id="SurroundWithLiveTemplate" />
   <action id="SwitchCoverage" />
@@ -388,10 +399,11 @@
   <action id="TypeHierarchy" />
   <action id="UnselectPreviousOccurrence" />
   <action id="Unwrap">
-    <keyboard-shortcut first-keystroke="ctrl 9" />
+    <keyboard-shortcut first-keystroke="shift ctrl 9" />
   </action>
   <action id="UpdateRunningApplication" />
   <action id="UsageView.Include" />
+  <action id="Vcs.Log.FocusTextFilter" />
   <action id="Vcs.QuickListPopupAction" />
   <action id="Vcs.ShowMessageHistory" />
   <action id="Vcs.ToggleAmendCommitMode" />
@@ -399,6 +411,7 @@
   <action id="VcsShowPrevChangeMarker" />
   <action id="ViewBreakpoints" />
   <action id="ViewInplaceComments" />
+  <action id="ViewSource" />
   <action id="XDebugger.AttachToProcess" />
   <action id="XDebugger.CopyWatch" />
   <action id="antlr.ExtractRule" />
