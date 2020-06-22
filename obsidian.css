@@ -9,9 +9,18 @@
 
 	--text-accent: #3388dd;
 	--text-accent-hover: #4499ff;
-	--text-normal: #ecedee;
+	--text-normal: #e3e4e5;
 	--text-muted: #aaa;
 	--text-highlight-bg: rgba(255, 220, 0, 0.4);
+	--font-monospace: "Hasklig", "Source Code Pro", monospace;
+}
+
+* {
+	font-family: "Hasklig", sans-serif;
+}
+
+.cm-s-obsidian .hmd-fold-html-stub, .cm-s-obsidian .hmd-fold-code-stub, .cm-s-obsidian.CodeMirror .HyperMD-hover > .HyperMD-hover-content code, .cm-s-obsidian .cm-formatting-hashtag, .cm-s-obsidian .cm-inline-code, .cm-s-obsidian .HyperMD-codeblock, .cm-s-obsidian .HyperMD-hr, .cm-s-obsidian .cm-hmd-frontmatter, .cm-s-obsidian .cm-hmd-orgmode-markup, .cm-s-obsidian .cm-formatting-code, .cm-s-obsidian .cm-math, .cm-s-obsidian span.hmd-fold-math-placeholder, .cm-s-obsidian .CodeMirror-linewidget kbd, .cm-s-obsidian .hmd-fold-html kbd {
+	font-family: "Hasklig", "Source Code Pro", monospace;
 }
 
 /* Specifically inline and plain syntax code blocks. */
