@@ -2,6 +2,9 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# for WSL X window stuff
+export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0.0
+
 export GIT_PS1_SHOWDIRTYSTATE=true
 source ~/.git-prompt.sh
 red=167
@@ -10,7 +13,13 @@ purple=98
 #PS1='${debian_chroot:+($debian_chroot)}\e[46m\e[1;37m \u \e[48;5;${red}m$(__git_ps1 " %s ")\e[48;5;${blue}m \w \e[0m '
 PS1='${debian_chroot:+($debian_chroot)}\[\e[48;5;${red}m\e[1;37m\] \u \[\e[46m\] \w \[\e[48;5;${purple}m$(__git_ps1 "\] %s \[")\e[0m\] → '
 PS1='\[\e[1;31m\] \u \[\e[1;30m\]>\[\e[1;36m\] \w $(__git_ps1 "\[\e[1;30m\]>\[\e[38;5;98m\] %s ")\[\e[0m\]\n → '
-PS1="\033]0;\w\007$PS1" # set title
+
+if [ -z "T_TITLE" ]; then
+  PS1="\033]0;\w\007$PS1" # set title
+else
+  PS1="\033]0;$T_TITLE\007$PS1" # set title
+fi
+
 # PS2='${debian_chroot:+($debian_chroot)}\[\e[01;32m\]\u\[\e[1;34m\] \w\[\e[0;37m\] \[\e[38;2m\]$\[\e[0m\] '
 PS2='\e[48;5;${red}mthis is PS2, fix it\e[0m'
 
@@ -94,3 +103,7 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/ben/.sdkman"
+[[ -s "/home/ben/.sdkman/bin/sdkman-init.sh" ]] && source "/home/ben/.sdkman/bin/sdkman-init.sh"

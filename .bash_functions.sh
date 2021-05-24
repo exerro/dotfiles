@@ -6,6 +6,7 @@ function reload {
 
 function title {
    echo -ne "\033]0;$*\007"
+   export T_TITLE="$*"
 }
 
 function git-changes {
