@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"target": "esnext",
+		"lib": ["esnext"],
+		"moduleResolution": "node",
+		"types": ["lua-types/5.2"],
+		"strict": true,
+		"outDir": "out",
+	},
+	"tstl": {
+		"luaTarget": "universal",
+		"noImplicitSelf": true,
+		"sourceMapTraceback": true,
+	}
+}

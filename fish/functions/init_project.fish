@@ -1,28 +1,7 @@
+#!/usr/bin/env fish
 
-function __setup_project_shared
-	set -l project_name $argv[1]
-	set -l template_path (dirname (dirname $fish_function_src_path))/templates
-
-	if test ! -d .git
-		echo Running (set_color $fish_color_command)git (set_color $fish_color_param)init (set_color normal)
-		git init &> /dev/null
-	end
-
-	if test ! -f README.md
-		echo Generating (set_color $fish_color_param)README.md (set_color normal)
-		echo "# $project_name"\n\n"TODO" > README.md
-		git add README.md
-	end
-
-	if test ! -f LICENSE
-		echo Generating (set_color $fish_color_param)LICENSE (set_color normal)
-		cp $template_path/LICENSE LICENSE
-		git add LICENSE
-	end
-end
-
-function __setup_kotlin_project
-	set -l template_path (dirname (dirname $fish_function_src_path))/templates
+function __init_kotlin_project
+	set -l template_path ~/code/dotfiles/templates
 	set -l project_name $argv[1]
 
 	for path in $template_path/kotlin/* $template_path/kotlin/.*
@@ -43,20 +22,27 @@ function __setup_kotlin_project
 		git add src/
 	end
 
-	echo "Generating gradle wrapper"
-	gradle wrapper --gradle-version=7.0.2
-	git add gradle
-	git add gradlew
-	git add gradlew.bat
+	if ! test -d gradle || ! test -f gradlew || ! test -f gradlew.bat
+		echo "Generating gradle wrapper"
+		gradle wrapper --gradle-version=7.0.2
+		git add gradle
+		git add gradlew
+		git add gradlew.bat
+	end
 
 	echo Running (set_color $fish_color_command)./gradlew (set_color $fish_color_param)test (set_color normal)
 	./gradlew run
+
+	echo Updating (set_color $fish_color_param).gitignore (set_color normal)
+	echo ".gradle" >> .gitignore
+	echo "build/" >> .gitignore
+	git add .gitignore
 
 	echo Committing
 	git commit -m "Set-up Kotlin project"
 end
 
-function __setup_typescript_project
+function __init_typescript_project
 	set -l template_path (dirname (dirname $fish_function_src_path))/templates
 	set -l project_name $argv[1]
 
@@ -81,7 +67,7 @@ function __setup_typescript_project
 	git commit -m "Set-up TypeScript project"
 end
 
-function __setup_typescript_lua_project
+function __init_typescript_lua_project
 	set -l template_path (dirname (dirname $fish_function_src_path))/templates
 	set -l project_name $argv[1]
 
@@ -106,24 +92,51 @@ function __setup_typescript_lua_project
 	git commit -m "Set-up TypeScript Lua project"
 end
 
-function setup_project
-	set -l mode $argv[1]
-	set -l name (basename $PWD)
+function init_project --description "Initialise project contents"
+	if test (dirname $PWD) != "/home/$USER/code/projects"
+		printf "\u001b[31mYou don't seem to be in a project directory.\u001b[0m\n"
+		return
+	end
 
-	switch $mode
-		case kotlin
-			echo Setting up Kotlin project "'$name'"
-			__setup_project_shared $name
-			__setup_kotlin_project $name
-		case typescript
-			echo Setting up TypeScript project "'$name'"
-			__setup_project_shared $name
-			__setup_typescript_project $name
-		case typescript-lua
-			echo Setting up Lua TypeScript project "'$name'"
-			__setup_project_shared $name
-			__setup_typescript_lua_project $name
-		case '*'
-			echo Unknown mode "'$mode'"
+	set -l project_name (basename $PWD)
+	set -l template_path ~/code/dotfiles/templates
+
+	if test ! -d .git
+		echo Running (set_color $fish_color_command)git (set_color $fish_color_param)init (set_color normal)
+		git init &> /dev/null
+	end
+
+	if test ! -f README.md
+		echo Generating (set_color $fish_color_param)README.md (set_color normal)
+		echo "# $project_name"\n\n"TODO" > README.md
+		git add README.md
+	end
+
+	if test ! -f LICENSE
+		echo Generating (set_color $fish_color_param)LICENSE (set_color normal)
+		cp $template_path/LICENSE LICENSE
+		git add LICENSE
+	end
+
+	if test ! -f .gitignore
+		echo Generating (set_color $fish_color_param).gitignore (set_color normal)
+		cp $template_path/.gitignore .gitignore
+		git add .gitignore
+	end
+
+	for mode in $argv
+		switch $mode
+			case kotlin
+				echo Setting up Kotlin project "'$project_name'"
+				__init_kotlin_project $project_name
+			case typescript
+				echo Setting up TypeScript project "'$project_name'"
+				__init_typescript_project $project_name
+			case typescript-lua
+				echo Setting up Lua TypeScript project "'$project_name'"
+				__init_typescript_lua_project $project_name
+			case '*'
+				echo Unknown mode "'$mode'"
+		end
 	end
 end

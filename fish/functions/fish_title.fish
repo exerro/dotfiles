@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 
-function fish_title
+function fish_title --description 'Set the terminal tab title'
 	if set -q tab_title
 		printf "$tab_title :: "
 	end

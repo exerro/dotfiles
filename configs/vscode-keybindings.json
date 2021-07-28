@@ -1,0 +1,254 @@
+[
+	{
+		"key": "ctrl+shift+b",
+		"command": "editor.action.peekDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "alt+f12",
+		"command": "-editor.action.peekDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "-workbench.action.toggleSidebarVisibility"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "workbench.action.tasks.build"
+	},
+	{
+		"key": "ctrl+shift+b",
+		"command": "-workbench.action.tasks.build"
+	},
+	{
+		"key": "ctrl+shift+o",
+		"command": "-workbench.action.gotoSymbol"
+	},
+	{
+		"key": "ctrl+b",
+		"command": "editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "f12",
+		"command": "-editor.action.revealDefinition",
+		"when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+alt+b",
+		"command": "editor.action.peekImplementation",
+		"when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+shift+f12",
+		"command": "-editor.action.peekImplementation",
+		"when": "editorHasImplementationProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+alt+down",
+		"command": "-editor.action.copyLinesDownAction",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "-workbench.view.debug",
+		"when": "viewContainer.workbench.view.debug.enabled"
+	},
+	{
+		"key": "alt+left",
+		"command": "cursorWordPartLeft"
+	},
+	{
+		"key": "shift+alt+left",
+		"command": "cursorWordPartLeftSelect"
+	},
+	{
+		"key": "alt+right",
+		"command": "cursorWordPartRight"
+	},
+	{
+		"key": "shift+alt+right",
+		"command": "cursorWordPartRightSelect"
+	},
+	{
+		"key": "alt+left",
+		"command": "-workbench.action.navigateBack"
+	},
+	{
+		"key": "alt+left",
+		"command": "-workbench.action.quickInputBack",
+		"when": "inQuickOpen"
+	},
+	{
+		"key": "alt+left",
+		"command": "-workbench.action.terminal.focusPreviousPane",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+right",
+		"command": "-workbench.action.navigateForward"
+	},
+	{
+		"key": "shift+alt+right",
+		"command": "-editor.action.smartSelect.expand",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "alt+right",
+		"command": "-workbench.action.terminal.focusNextPane",
+		"when": "terminalFocus && terminalProcessSupported"
+	},
+	{
+		"key": "alt+down",
+		"command": "-showNextParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "down",
+		"command": "-showNextParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "alt+up",
+		"command": "-showPrevParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "up",
+		"command": "-showPrevParameterHint",
+		"when": "editorFocus && parameterHintsMultipleSignatures && parameterHintsVisible"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpen"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "-workbench.action.quickOpenNavigateNextInFilePicker",
+		"when": "inFilesPicker && inQuickOpen"
+	},
+	{
+		"key": "ctrl+oem_period",
+		"command": "-editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "alt+enter",
+		"command": "problems.action.showQuickFixes",
+		"when": "problemFocus"
+	},
+	{
+		"key": "ctrl+oem_period",
+		"command": "-problems.action.showQuickFixes",
+		"when": "problemFocus"
+	},
+	{
+		"key": "alt+enter",
+		"command": "-notebook.cell.executeAndInsertBelow",
+		"when": "notebookCellListFocused && notebookCellType == 'markdown' || notebookCellListFocused && notebookCellExecutionState == 'failed' || notebookCellExecutionState == 'idle' || notebookCellExecutionState == 'succeeded' && notebookKernelCount > 0"
+	},
+	{
+		"key": "alt+enter",
+		"command": "-search.action.openInEditor",
+		"when": "hasSearchResult && searchViewletFocus"
+	},
+	{
+		"key": "alt+enter",
+		"command": "-debug.openBreakpointToSide",
+		"when": "breakpointsFocused"
+	},
+	{
+		"key": "alt+enter",
+		"command": "-editor.action.selectAllMatches",
+		"when": "editorFocus && findWidgetVisible"
+	},
+	{
+		"key": "alt+enter",
+		"command": "-testing.editFocusedTest",
+		"when": "focusedView == 'workbench.view.testing'"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "editor.action.showHover",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+k ctrl+i",
+		"command": "-editor.action.showHover",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+q",
+		"command": "editor.debug.action.showDebugHover",
+		"when": "editorTextFocus && inDebugMode"
+	},
+	{
+		"key": "ctrl+k ctrl+i",
+		"command": "-editor.debug.action.showDebugHover",
+		"when": "editorTextFocus && inDebugMode"
+	},
+	{
+		"key": "ctrl+p",
+		"command": "editor.action.triggerParameterHints",
+		"when": "editorHasSignatureHelpProvider && editorTextFocus"
+	},
+	{
+		"key": "ctrl+shift+space",
+		"command": "-editor.action.triggerParameterHints",
+		"when": "editorHasSignatureHelpProvider && editorTextFocus"
+	},
+	{
+		"key": "shift+f6",
+		"command": "editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "f2",
+		"command": "-editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "shift+f6",
+		"command": "-workbench.action.focusPreviousPart"
+	},
+	{
+		"key": "shift+f6",
+		"command": "renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "f2",
+		"command": "-renameFile",
+		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+	},
+	{
+		"key": "shift+f6",
+		"command": "debug.renameWatchExpression",
+		"when": "watchExpressionsFocused"
+	},
+	{
+		"key": "f2",
+		"command": "-debug.renameWatchExpression",
+		"when": "watchExpressionsFocused"
+	},
+	{
+		"key": "shift+f6",
+		"command": "workbench.action.terminal.renameInstance",
+		"when": "terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection"
+	},
+	{
+		"key": "f2",
+		"command": "-workbench.action.terminal.renameInstance",
+		"when": "terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection"
+	},
+	{
+		"key": "ctrl+shift+q",
+		"command": "editor.action.peekTypeDefinition"
+	}
+]
