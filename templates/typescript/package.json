@@ -1,22 +1,22 @@
 {
-  "name": "%PROJECT_NAME%",
-  "version": "1.0.0",
-  "description": "%PROJECT_NAME%",
-  "author": "exerro",
-  "license": "MIT",
-  "bugs": { "url": "https://github.com/exerro/%PROJECT_NAME%/issues" },
-  "homepage": "https://github.com/exerro/%PROJECT_NAME%#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/exerro/%PROJECT_NAME%.git"
-  },
-  "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch"
-  },
-  "dependencies": {
-    "dotenv": "^10.0.0",
-    "typescript": "^4.2.4",
-    "@types/node": "^15.6.0"
-  }
+	"name": "%PROJECT_NAME%",
+	"version": "1.0.0",
+	"description": "%PROJECT_NAME%",
+	"author": "exerro",
+	"license": "MIT",
+	"bugs": { "url": "https://github.com/exerro/%PROJECT_NAME%/issues" },
+	"homepage": "https://github.com/exerro/%PROJECT_NAME%#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/exerro/%PROJECT_NAME%.git"
+	},
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch"
+	},
+	"dependencies": {
+		"dotenv": "^10.0.0",
+		"typescript": "^4.2.4",
+		"@types/node": "^15.6.0"
+	}
 }

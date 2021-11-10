@@ -4,6 +4,8 @@ function __init_kotlin_project
 	set -l template_path ~/code/dotfiles/templates
 	set -l project_name $argv[1]
 
+	rm .gitignore
+
 	for path in $template_path/kotlin/* $template_path/kotlin/.*
 		set -l local_path (echo $path | sed "s%$template_path/kotlin/%./%")
 		if test ! -f $local_path
@@ -33,11 +35,6 @@ function __init_kotlin_project
 	echo Running (set_color $fish_color_command)./gradlew (set_color $fish_color_param)test (set_color normal)
 	./gradlew run
 
-	echo Updating (set_color $fish_color_param).gitignore (set_color normal)
-	echo ".gradle" >> .gitignore
-	echo "build/" >> .gitignore
-	git add .gitignore
-
 	echo Committing
 	git commit -m "Set-up Kotlin project"
 end
@@ -45,6 +42,8 @@ end
 function __init_typescript_project
 	set -l template_path (dirname (dirname $fish_function_src_path))/templates
 	set -l project_name $argv[1]
+
+	rm .gitignore
 
 	for path in $template_path/typescript/** $template_path/typescript/.**
 		set -l local_path (echo $path | sed "s%$template_path/typescript/%./%")
@@ -70,6 +69,8 @@ end
 function __init_typescript_lua_project
 	set -l template_path (dirname (dirname $fish_function_src_path))/templates
 	set -l project_name $argv[1]
+
+	rm .gitignore
 
 	for path in $template_path/typescript_lua/** $template_path/typescript_lua/.**
 		set -l local_path (echo $path | sed "s%$template_path/typescript_lua/%./%")

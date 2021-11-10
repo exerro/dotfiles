@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-# TODO: what is this?
+fish_ssh

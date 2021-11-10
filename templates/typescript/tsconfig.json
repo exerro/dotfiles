@@ -8,11 +8,6 @@
 		"outDir": "out",
 		"sourceMap": true,
 	},
-	"tstl": {
-		"luaTarget": "universal",
-		"noImplicitSelf": true,
-		"sourceMapTraceback": true,
-	},
 	"exclude": [
 		"node_modules"
 	]
