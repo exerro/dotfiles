@@ -25,6 +25,10 @@ set -U CDPATH . ~/code/dev/app ~/code/dev/lib
 set -U fish_function_src_path (realpath $script_path/functions)
 set -U LS_COLORS "no=00:fi=36:di=33:ln=32:pi=01;30:do=01;30:bd=01;30:cd=01;30:or=31:so=01;30:su=01;30:sg=01;30:tw=01;30:ow=33:st=01;30:ex=36:mi=31"
 
+set -U fish_color_cwd_root cyan
+set -U fish_color_cwd cyan
+set -U fish_color_user magenta
+
 set -U __fish_git_prompt_show_informative_status 1
 set -U __fish_git_prompt_hide_untrackedfiles 1
 set -U __fish_git_prompt_color_branch green
