@@ -1,3 +1,3 @@
 #!/usr/bin/env fish
 
-fish_ssh
+fish_ssh_agent

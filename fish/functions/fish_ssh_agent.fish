@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+# All credit goes to https://github.com/ivakyb/fish_ssh_agent/
+
 function __ssh_agent_is_started -d "check if ssh agent is already started"
    if begin; test -f $SSH_ENV; and test -z "$SSH_AGENT_PID"; end
       source $SSH_ENV > /dev/null
@@ -21,7 +23,7 @@ function __ssh_agent_start -d "start a new ssh agent"
    true  # suppress errors from setenv, i.e. set -gx
 end
 
-function fish_ssh --description "Start ssh-agent if not started yet, or uses already started ssh-agent."
+function fish_ssh_agent --description "Start ssh-agent if not started yet, or uses already started ssh-agent."
    if test -z "$SSH_ENV"
       set -xg SSH_ENV $HOME/.ssh/environment
    end
