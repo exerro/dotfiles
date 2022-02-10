@@ -30,12 +30,13 @@ function fish_prompt --description 'Write the prompt'
 	if set -q SSH_TTY
 		# if we're running over ssh, purple username shown
 		printf (set_color purple --dim)'❰'
-		printf (set_color purple)$USER(set_color purple --dim)'@'$hostname'❱ '(set_color normal)
+		printf (set_color normal)(set_color purple)$USER
+		printf (set_color purple --dim)'@'$hostname'❱ '(set_color normal)
 		set length (math $length + (string length '❰'$USER'@'$hostname'❱ '))
 	else if functions -q fish_is_root_user; and fish_is_root_user
 		# if we're root, red username shown
 		printf (set_color red --dim)'❰'
-		printf (set_color red)$USER
+		printf (set_color normal)(set_color red)$USER
 		printf (set_color red --dim)'❱ '(set_color normal)
 		set length (math $length + (string length '❰'$USER'❱ '))
 	else
