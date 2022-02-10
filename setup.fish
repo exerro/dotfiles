@@ -37,7 +37,7 @@ end
 
 if not test -e /usr/share/highlight/langDefs/fish.lang
 	echo "Adding fish syntax highlighting to highlight"
-	ln -s (realpath $script_path/config/fish.lang) /usr/share/highlight/langDefs/fish.lang
+	sudo ln -s (realpath $script_path/config/fish.lang) /usr/share/highlight/langDefs/fish.lang
 end
 
 if not type -q exa
