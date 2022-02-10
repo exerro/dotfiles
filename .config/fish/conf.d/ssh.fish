@@ -23,12 +23,16 @@ function __ssh_agent_start -d "start a new ssh agent"
 	true  # suppress errors from setenv, i.e. set -gx
 end
 
-if test -z (cat ~/.ssh/config | grep "AddKeysToAgent yes")
-	printf "\nAddKeysToAgent yes\n" >> ~/.ssh/config
+if test -e ~/.ssh/config
+	if test -z (cat ~/.ssh/config | grep "AddKeysToAgent yes")
+		printf "\nAddKeysToAgent yes\n" >> ~/.ssh/config
+	end
 end
 
-if test -z "$SSH_ENV"
-	set -xg SSH_ENV $HOME/.ssh/environment
+if test -d ~/.ssh
+	if test -z "$SSH_ENV"
+		set -gx SSH_ENV $HOME/.ssh/environment
+	end
 end
 
 if not __ssh_agent_is_started
