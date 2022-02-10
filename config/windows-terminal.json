@@ -486,6 +486,6 @@
 	"showTerminalTitleInTitlebar": false,
 	"tabWidthMode": "titleLength",
 	"theme": "dark",
-	"useAcrylicInTabRow": false,
+	"useAcrylicInTabRow": true,
 	"windowingBehavior": "useAnyExisting"
 }

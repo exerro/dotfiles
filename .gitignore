@@ -1,7 +1,3 @@
-# Installed fish packages
-/.config/fish/functions/fisher.fish
-/.config/fish/functions/__z*.fish
-
 # Obsidian workspace stuff
-/.obsidian/workspace
-/.obsidian/workspaces.json
+/config/.obsidian/workspace
+/config/.obsidian/workspaces.json
