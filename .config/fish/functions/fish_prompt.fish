@@ -29,7 +29,7 @@ function fish_prompt --description 'Write the prompt'
 	# show the user if on ssh or if we're root, and host if on ssh
 	if set -q SSH_TTY
 		# if we're running over ssh, purple username shown
-		printf (set_color purple)$USER'@'$hostname' '
+		printf (set_color purple)$USER(set_color purple --dim)'@'$hostname' '
 		set length (math $length + (string length $USER'@'$hostname' '))
 	else if functions -q fish_is_root_user; and fish_is_root_user
 		# if we're root, red username shown

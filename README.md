@@ -18,7 +18,10 @@ highlighting of commands, and epic prompt customisation.
 	/>
 </p>
 
-Run `source fish/setup_fish.bash` to set it up. This will:
+> Warning: the following will yeet your existing `~/.config/fish` into oblivion.
+>          I'll fix that at some point...
+
+Run `source setup.bash` to set it up. This will:
 * Install fish-shell
 * Set fish-shell as default shell
 * Alias relevant parts of `.config/fish`
@@ -26,9 +29,6 @@ Run `source fish/setup_fish.bash` to set it up. This will:
   * fortune + cowsay for greeting
   * highlight for highlighting stuff
   * exa for ls improvement
-
-> Note, there's a fish-specific syntax definition file `config/fish.lang` which
-> can be used alongside `highlight` for fish files!
 
 ## Fonts and images
 
@@ -39,7 +39,7 @@ environments. Notably, Hack is the font I use for code and terminal.
 > font which looks nice, should add that at some point!
 
 <details>
-	<summary>Reference image for Karmilla</summart>
+	<summary>Reference image for Karmilla</summary>
 	<img
 		src="https://github.com/chetachiezikeuzor/Yin-and-Yang-Theme/blob/main/assets/light1.png?raw=true"
 		alt="Karmilla font being used in a nicely themed Obsidian file by GitHub
