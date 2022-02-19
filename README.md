@@ -36,7 +36,8 @@ This repo contains the `fonts/` and `images/` I use for programming
 environments. Notably, Hack is the font I use for code and terminal.
 
 > ["Inter"](https://fonts.google.com/specimen/Inter) is another non-monospace
-> font which looks nice, should add that at some point!
+> font which looks nice, should add that at some point! Also Montserrat! And
+> Comfortaa
 
 <details>
 	<summary>Reference image for Karmilla</summary>
